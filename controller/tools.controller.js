@@ -41,7 +41,6 @@ module.exports.updateTool = (req, res) => {
     const {id} = req.params;
     const filter = {_id: id};
 
-    const newData = tools.map(tool => {
-        
-    })
+    const newData = tools.map(tool => tool.id === Number(id));
+    res.send(newData);
 }
