@@ -11,5 +11,6 @@ router.route("/")
 
 router.route("/:id")
     .get(viewCount, limiter, toolsController.getATools)
+    .patch(toolsController.updateTool)
 
 module.exports = router;
